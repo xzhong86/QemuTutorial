@@ -27,6 +27,7 @@ On fedora:
 
 ### Compile Kernel
  - `make defconfig ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-`
+   - with answer no for questions.
  - `make Image -j  ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-`
 
 
