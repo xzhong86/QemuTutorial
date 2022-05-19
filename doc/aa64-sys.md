@@ -53,7 +53,7 @@ $ fakeroot
    - detach image: `sudo qemu-nbd -d /dev/nbd0 && sudo rmmod nbd`
 
  - or use raw disk image. refer to [page](https://azeria-labs.com/emulate-raspberry-pi-with-qemu/)
-
+ - Another choice is use [libguestfs tools (chinese)](doc/guestfish-usage-zh.md).
 
 ## Run QEMU
 
