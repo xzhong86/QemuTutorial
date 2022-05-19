@@ -53,11 +53,11 @@ $ fakeroot
    - detach image: `sudo qemu-nbd -d /dev/nbd0 && sudo rmmod nbd`
 
  - or use raw disk image. refer to [page](https://azeria-labs.com/emulate-raspberry-pi-with-qemu/)
- - Another choice is use [libguestfs tools (chinese)](guestfish-usage-zh.md).
+ - Another choice is use [libguestfs tools (chinese)](/doc/guestfish-usage-zh.md).
 
 ## Run QEMU
 
- - run qemu with init ram disk. [run-qemu-rd.sh](scripts/run-qemu-rd.sh)
+ - run qemu with init ram disk. [run-qemu-rd.sh](/scripts/run-qemu-rd.sh)
 
 ```sh
 #!/bin/sh
@@ -72,8 +72,8 @@ $qemu -M virt -cpu max -m 2G -nographic \
     -append "console=ttyAMA0 rootfstype=ramfs rdinit=/sbin/init earlycon"
 ```
 
- - run with ramdisk and qcow2 disk. [run-qemu-dbg.sh](scripts/run-qemu-dbg.sh). we boot from ramdisk and check the disk image.
- - run with qcow2 disk. [run-qemu-disk.sh](scripts/run-qemu-disk.sh)
+ - run with ramdisk and qcow2 disk. [run-qemu-dbg.sh](/scripts/run-qemu-dbg.sh). we boot from ramdisk and check the disk image.
+ - run with qcow2 disk. [run-qemu-disk.sh](/scripts/run-qemu-disk.sh)
    - with Paravirtualization disk. simple and faster. refer to [page](https://serverfault.com/questions/803388/what-is-the-difference-between-dev-vda-and-dev-sda)
-
+ - run with shared folder on host: refer to scripts/run-qemu-disk-9p.sh .
 
