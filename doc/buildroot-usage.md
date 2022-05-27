@@ -14,5 +14,13 @@
 
 buildroot会编译大量host主机程序，用于编译guest环境，甚至包括的交叉编译器，qemu。编译好就可以直接运行。
 
-TBD ： 控制不编译交叉编译器、内核, 进行更完整的配置（如 使用glibc，加入coreutils，加入systemctl）
+<del>TBD ：控制不编译交叉编译器、内核, 进行更完整的配置（如 使用glibc，加入coreutils，加入systemctl）</del>
+
+
+## 配置更多包
+
+这次尝试尽可能多的配置我认为需要的包，包括 systemd， glibc， binutils， 各种压缩解压工具等等。
+然后执行make进行编译，然后等待很久的下载编译之后，就生成了一个像模像样的Linx环境了，真是强大的工具。
+
+途中需要解决网络代理的问题，这里就不赘述了。
 
